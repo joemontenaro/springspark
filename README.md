@@ -30,7 +30,8 @@ cd springspark
 ```
 
 ### 2. Create a PKCS12 Keystore (for HTTPS)
-```keytool -genkeypair \
+```
+keytool -genkeypair \
   -alias springspark \
   -keyalg RSA \
   -keysize 2048 \
