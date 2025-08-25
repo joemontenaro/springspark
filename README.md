@@ -64,17 +64,6 @@ spark3-submit \
 
 ---
 
-### Configuration
-```
-server.port=9443
-server.ssl.key-store=classpath:springspark.p12
-server.ssl.key-store-password=changeit
-server.ssl.key-store-type=PKCS12
-server.ssl.key-alias=springspark
-```
-
----
-
 ### Notes
 - Queries entered on the home page are executed via SparkSession on YARN.
 - Results show the first 20 rows for readability.
