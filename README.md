@@ -26,7 +26,7 @@ A simple Spring Boot web application that connects to Apache Spark running on YA
 
 ```
 git clone https://github.com/joemontenaro/springspark.git
-cd springsparkapp
+cd springspark
 ```
 
 ### 2. Create a PKCS12 Keystore (for HTTPS)
