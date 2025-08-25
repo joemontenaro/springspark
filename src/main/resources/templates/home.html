@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spark SQL Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px; /* adds spacing after the label */
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;           /* narrower than the full container */
+            padding: 8px;
+            font-size: 14px;
+            margin: 5px auto 15px auto; /* top/bottom spacing + centered horizontally */
+            display: block;       /* needed for margin auto to center */
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .results {
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spark SQL Portal</h1>
+
+        <form method="post" action="/">
+            <label for="sql">Enter SQL:</label>
+            <input type="text" id="sql" name="sql" size="80" 
+                   placeholder="show tables"
+                   th:value="${sql}"/>
+            <button type="submit">Run Query</button>
+        </form>
+
+        <div class="results" th:utext="${output}">
+            No results yet.
+        </div>
+
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
