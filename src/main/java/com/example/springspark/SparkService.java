@@ -12,7 +12,7 @@ public class SparkService {
     @PostConstruct
     public void init() {
         spark = SparkSession.builder()
-                .appName("SpringSparkApp")
+                .appName("springspark")
                 .getOrCreate();
         System.out.println("SparkSession started: " + spark.version());
     }
